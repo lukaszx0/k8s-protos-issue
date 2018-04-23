@@ -15,10 +15,14 @@ func main() {
 		panic(err)
 	}
 	fmt.Printf("deployment.Marshal(): %v\n", marshalled)
+
+	marshalled2, err := proto.Marshal(deployment)
+	fmt.Printf("proto.Marshal(deployment): %v\n", marshalled2)
+
 	embededDeployment := &pb.EmbeddedDeployment{Foobar: "foobar", Deployment: deployment}
-	marshalled2, err := proto.Marshal(embededDeployment)
+	marshalled3, err := proto.Marshal(embededDeployment)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("proto.Marshal(embededDeployment): %v\n", marshalled2)
+	fmt.Printf("proto.Marshal(embededDeployment): %v\n", marshalled3)
 }
