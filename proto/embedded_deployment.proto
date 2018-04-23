@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package proto;
+
+import "k8s.io/api/apps/v1/generated.proto";
+
+message EmbeddedDeployment {
+    string foobar = 1;
+    k8s.io.api.apps.v1.Deployment deployment = 2;
+}
