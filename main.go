@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	pb "k8s-protos-issue/proto" // protoc -Iproto -I$GOPATH/src --go_out=proto proto/embedded_deployment.proto
+	pb "github.com/lukaszx0/k8s-protos-issue/proto" // protoc -Iproto -I$GOPATH/src --go_out=proto proto/embedded_deployment.proto
 
-	"github.com/golang/protobuf/proto"
+	"github.com/gogo/protobuf/proto"
 	"k8s.io/api/apps/v1"
 )
 
